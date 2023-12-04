@@ -51,33 +51,29 @@ export default function Cards() {
     ]
   return (
     <div>
-        <div className=' flex flex-col space-y-0 items-center justify-center overflow-hidden text-center z-0'>
-        <div className='text-center w-[480px] md:w-[900px] lg:w-[1200px] z-20'>
-            <motion.div
-            initial={{opacity:0, y:140}}
-            transition={{duration:1}}
-            whileInView={{opacity:1, y:0}}
-            viewport={{once:true}}
-            className='mb-14'>
-                <div className='flex flex-col items-center mt-40'>
-                    <Tag tagline='And so much more... 💼' color='#f1f2f4' />
-                </div>
-                <h1 className='sm:text-2xl  font-extrabold pb-6' style={{fontSize:"58px", lineHeight:"44px"}}>
-                    Our features to make your life easier
-                </h1>
-            </motion.div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1 p-4 m-4'>
-                {
-                    Cards.map((card, index) => (
-                        <CardComp key={index} {...card} />
-                    ))
-                }
+      <div className=" flex flex-col space-y-0 items-center justify-center overflow-hidden text-center z-0">
+        <div className="text-center w-[400px] md:w-[900px] lg:w-[1200px] z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 140 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-14"
+          >
+            <div className="flex flex-col items-center mt-40">
+              <Tag tagline="And so much more... 💼" color="#f1f2f4" />
             </div>
-            
-            
-            
+            <h1 className="sm:text-5xl text-4xl  font-extrabold pb-6">
+              Our features to make your life easier
+            </h1>
+          </motion.div>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1 p-4 m-4">
+            {Cards.map((card, index) => (
+              <CardComp key={index} {...card} />
+            ))}
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }

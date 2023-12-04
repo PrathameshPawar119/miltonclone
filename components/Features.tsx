@@ -60,33 +60,29 @@ export default function Features() {
     ]
   return (
     <div>
-        <div className=' flex flex-col space-y-0 items-center justify-center overflow-hidden text-center z-0'>
-        <div className='text-center w-[480px] md:w-[800px] lg:w-[1000px] z-20'>
-            <motion.div
-            initial={{opacity:0, y:140}}
-            transition={{duration:1}}
-            whileInView={{opacity:1, y:0}}
-            viewport={{once:true}}
-            className='mb-14'>
-                <div className='flex flex-col items-center mt-40'>
-                    <Tag tagline='Our main features 🦸🏼' color='#f1f2f4' />
-                </div>
-                <h1 className='sm:text-2xl  font-extrabold pb-6' style={{fontSize:"58px", lineHeight:"44px"}}>
-                    Discover your new superpowers
-                </h1>
-            </motion.div>
-            <div>
-                {
-                    Features.map((feature, index) => (
-                        <Feature key={index} reverse={(index%2 != 0)} {...feature} />
-                    ))
-                }
+      <div className=" flex flex-col space-y-0 items-center justify-center overflow-hidden text-center z-0">
+        <div className="text-center w-[400px] md:w-[800px] lg:w-[1000px] z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 140 }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-14"
+          >
+            <div className="flex flex-col items-center mt-40">
+              <Tag tagline="Our main features 🦸🏼" color="#f1f2f4" />
             </div>
-            
-            
-            
+            <h1 className="sm:text-5xl text-4xl  font-extrabold pb-6">
+              Discover your new superpowers
+            </h1>
+          </motion.div>
+          <div>
+            {Features.map((feature, index) => (
+              <Feature key={index} reverse={index % 2 != 0} {...feature} />
+            ))}
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }

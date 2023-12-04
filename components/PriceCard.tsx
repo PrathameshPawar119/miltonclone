@@ -24,7 +24,7 @@ export default function PriceCard({ tagline, tagcover, price, pricecover, button
         transition={{duration:1}}
         whileInView={{opacity:1, y:0}}
         viewport={{once:true}}
-        className='h-screen flex space-y-0 items-center justify-center overflow-hidden z-0 mx-6 min-w-[240px] max-w-[400px] text-left'>
+        className=' flex space-y-0 items-center justify-center overflow-hidden z-0 mx-6 min-w-[240px] max-w-[400px] text-left my-12'>
             <Card className="py-4">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <Tag tagline={tagline} color={color}/>
