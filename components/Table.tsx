@@ -106,6 +106,7 @@ export default function DTable({users, deleteRecord, handleUpdate} : Props) {
                           className="hover:text-indigo-900 mx-2"
                           onClick={() => {
                             setAction("view");
+                            setSingleUser(user);
                             setId(user.id);
                             onOpen();
                           }}
