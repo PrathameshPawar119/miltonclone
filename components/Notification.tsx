@@ -10,12 +10,12 @@ type Props = {
 
 export default function Notification({message, person, img, reverse}:Props) {
   return (
-    <div className="lg:w-[400px] sm:w-[200px] flex flex-col flex-nowrap text-left relative mb-12">
+    <div className="lg:w-[380px] sm:w-[200px] flex flex-col flex-nowrap text-left relative mb-12 mx-6">
       <div
         className={`absolute ${reverse ? "top-0 left-0" : " top-0 right-0"}`}
       >
         <div
-          className={`bg-gray-800 text-left p-3 h-fit lg:w-[340px] sm:w-[160px] rounded-tl-lg rounded-tr-lg ${
+          className={`bg-gray-800 text-left p-3 h-fit lg:w-[300px] sm:w-[160px] rounded-tl-lg rounded-tr-lg ${
             reverse ? "rounded-bl-lg" : "rounded-br-lg"
           }`}
         >

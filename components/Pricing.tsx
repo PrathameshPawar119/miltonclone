@@ -132,7 +132,7 @@ export default function Pricing() {
             <div className="flex flex-col items-center mt-40">
               <Tag tagline="Pricing and plans 💰" color="#f1f2f4" />
             </div>
-            <h1 className="sm:text-5xl text-4xl font-extrabold pb-6">
+            <h1 className="sm:text-5xl text-4xl font-extrabold pb-6 mx-4">
               Find the best plan for your needs
             </h1>
           </motion.div>
