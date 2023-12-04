@@ -22,11 +22,12 @@ export default function Home({ users }: Props) {
 
   const deleteRecord = (uid: string) => {
     users = users.filter((user) => user.id !== uid);
+    setData(users);
   };
 
   const handleSearch = (query: string) => {
     const filteredUsers = query
-      ? users.filter((user) =>
+      ? data.filter((user) =>
           user.name.toLowerCase().includes(query.toLowerCase()) || user.role.toLowerCase() === query.toLowerCase()
         )
       : users;
@@ -41,6 +42,7 @@ export default function Home({ users }: Props) {
       );
       return updatedUsers;
     });
+    users = data;
   };
 
 
