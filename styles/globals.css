@@ -10,11 +10,11 @@
 
 @layer components {
   .HeroButton {
-    @apply px-2 md: px-6 py-2 border border-[#111111] rounded-full uppercase text-[12px] md:text-sm text-gray-500 font-bold transition-all tracking-widest hover:border-[#434343] hover:text-gray-200 hover:cursor-pointer border-t-0 border-l-0 border-r-0 hover:border-r-2
+    @apply px-2 md:px-6 py-2 border border-[#111111] rounded-full uppercase text-[12px] md:text-sm text-gray-500 font-bold transition-all tracking-widest hover:border-[#434343] hover:text-gray-200 hover:cursor-pointer border-t-0 border-l-0 border-r-0 hover:border-r-2
   }
 
   .ContactInput {
-    @apply outline-none bg-slate-300/10 rounded-sm border-b px-1 py-2 md: px-2 md:py-4 text-gray-300 border-[#242424] placeholder-gray-300 transition-all focus:border-[#F7ABBA]/80 focus:text-[#F7ABBA]/80
+    @apply outline-none bg-slate-300/10 rounded-sm border-b px-1 py-2 md:px-2 md:py-4 text-gray-300 border-[#242424] placeholder-gray-300 transition-all focus:border-[#F7ABBA]/80 focus:text-[#F7ABBA]/80
   }
 }
 

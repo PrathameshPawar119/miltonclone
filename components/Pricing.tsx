@@ -57,8 +57,6 @@ export default function Pricing() {
                 "A top feature with limitations",
                 "An incredible feature so useful",
                 "A top feature",
-                "A premium feature",
-                "You need this feature"
             ]
             
         },
@@ -120,8 +118,8 @@ export default function Pricing() {
     ]
   return (
     <div>
-      <div className=" flex flex-col space-y-0 items-center justify-center overflow-hidden text-center z-0">
-        <div className="text-center w-[400px] md:w-[900px] lg:w-[1200px] z-20">
+      <div className=" flex flex-col space-y-0 items-center justify-center text-center z-0  ">
+        <div className="text-center z-20  xl:w-[65%] w-full">
           <motion.div
             initial={{ opacity: 0, y: 140 }}
             transition={{ duration: 1 }}
@@ -129,17 +127,17 @@ export default function Pricing() {
             viewport={{ once: true }}
             className="mb-14"
           >
-            <div className="flex flex-col items-center mt-40">
+            <div className="flex flex-col items-center">
               <Tag tagline="Pricing and plans 💰" color="#f1f2f4" />
             </div>
             <h1 className="sm:text-5xl text-4xl font-extrabold pb-6 mx-4">
               Find the best plan for your needs
             </h1>
           </motion.div>
-          <div>
-            <Tabs aria-label="Options">
-              <Tab key="monthly" title="Monthly">
-                <div className="grid lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1 p-4 m-4">
+          <div >
+            <Tabs aria-label="Options" >
+              <Tab key="monthly" title="Monthly" >
+                <div className="flex flex-wrap items-stretch justify-center   p-4 gap-4">
                   {MonthlyCards.map((card, index) => (
                     <PriceCard key={index} {...card} />
                   ))}

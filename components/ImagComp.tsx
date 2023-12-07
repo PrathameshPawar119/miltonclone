@@ -13,7 +13,7 @@ export default function ImagComp() {
         transition={{duration:1}}
         whileInView={{opacity:1, y:0}}
         viewport={{once:true}}
-        className='flex flex-col space-y-0 items-center justify-center overflow-hidden z-0'>
+        className=' flex flex-col space-y-0 items-center justify-center z-0'>
             <Image src={feedback1} height={80} width={300} alt='Feedback' />
             <div>
                 <Image src={banner} style={{borderRadius:"10px", borderColor:"gray", boxShadow:"inherit"}} height={900} width={1200} alt='Banner1'/>

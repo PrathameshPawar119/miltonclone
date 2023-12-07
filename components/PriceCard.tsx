@@ -24,18 +24,16 @@ export default function PriceCard({ tagline, tagcover, price, pricecover, button
         transition={{duration:1}}
         whileInView={{opacity:1, y:0}}
         viewport={{once:true}}
-        className=' flex space-y-0 items-center justify-center overflow-hidden z-0 mx-6 min-w-[240px] max-w-[400px] text-left my-12'>
-            <Card className="py-4">
-                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+        className=' flex space-y-0 items-center justify-center z-0  '>
+            <Card >
+                <CardHeader className="gap-2 flex-col items-center text-center  ">
                     <Tag tagline={tagline} color={color}/>
-                    <p className="text-[16px] text-default-500 text-left">{tagcover}</p>
-                    <div className='my-8 text-left '>
+                    <p className="text-base text-default-500">{tagcover}</p>
                         <span className='text-[42px]'><b>${price}</b></span><span className='text-gray-500'>/mo</span>
-                    </div>
                         <p className='text-lg'>{pricecover}</p>
                 </CardHeader>
-                <CardBody className="overflow-visible p-3 w-full flex items-center">
-                    <div className='p-2 flex flex-col text-center items-center'>
+                <CardBody className="overflow-visible  w-full flex items-center">
+                    <div className='gap-2 flex flex-col text-center items-center'>
                         <Button as={Link} className='mt-4' style={{backgroundColor: "#2E2E2E", color: "#FFFFFF", fontSize:"18px"}} href="#" variant="flat">
                         <b>Get Started</b> 
                         </Button>

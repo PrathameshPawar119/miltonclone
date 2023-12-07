@@ -25,23 +25,22 @@ export default function Feature({reverse, tagline, headline, txt, poster, messag
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className=" flex items-center justify-center z-0  mt-20 md:mt-4 lg:mt-4 "
+        className=" flex items-center justify-center  z-0  my-20  sm:text-left text-center"
       >
         <div
-          className={`flex flex-col py-6 px-8 md:flex-row w-[400px] md:w-[800px] lg:w-[1000px] z-20 ${
+          className={`  md:flex-1  flex md:flex-row flex-col justify-between py-6 px-8   z-20 ${
             reverse ? "flex-col-reverse md:flex-row-reverse" : ""
           }`}
         >
-          <div className="md:w-1/2 flex flex-col text-left">
+          <div className="flex-1 flex flex-col gap-4   ">
             <Tag tagline={tagline} color={color} />
             <h1
-              className=" sm:text-xl  font-extrabold pb-6 space-x-2"
-              style={{ fontSize: "38px", lineHeight: "32px" }}
+              className=" sm:text-5xl text-2xl  font-extrabold pb-6 space-x-2"
             >
               {headline}
             </h1>
-            <p className="text-xl text-gray-500 mt-8">{txt}</p>
-            <div className="my-12">
+            <p className="sm:text-xl  text-gray-500 ">{txt}</p>
+            <div className="  sm:text-base text-sm">
               <Notification
                 message={message}
                 person={person}
@@ -50,8 +49,10 @@ export default function Feature({reverse, tagline, headline, txt, poster, messag
               />
             </div>
           </div>
-          <div className="mt-16 mb-6">
-            <Image src={poster} width={600} height={1000} alt="Feature 1" />
+          <div className={`md:flex-1 ${
+            reverse ? "mt-0" : "mt-40"
+          }`}>
+            <Image src={poster}  alt="Feature 1" />
           </div>
         </div>
       </motion.div>
