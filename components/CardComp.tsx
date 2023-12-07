@@ -15,14 +15,14 @@ type Props = {
 
 export default function CardComp({ tagline, txt, poster, color}: Props) {
   return (
-    <div>
+    <div className=''>
         <motion.div
         initial={{opacity:0, y:140}}
         transition={{duration:1}}
         whileInView={{opacity:1, y:0}}
         viewport={{once:true}}
-        className='h-screen flex space-y-0 items-center justify-center overflow-hidden z-0 mx-6 min-w-[240px] max-w-[400px]'>
-            <Card className="py-4">
+        className='h-fit sm:max-w-[300px] max-w-full flex space-y-0 items-start justify-center z-0 mx-6  '>
+            <Card className="py-4 h-[600px]  flex items-start">
                 <CardBody className="overflow-visible py-2 w-full flex items-center">
                     <Image
                     alt="Card background"
@@ -31,9 +31,9 @@ export default function CardComp({ tagline, txt, poster, color}: Props) {
                     width={270}
                     />
                 </CardBody>
-                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                <CardHeader className="px-4 flex-col items-start  flex-1">
                     <Tag tagline={tagline} color={color}/>
-                    <p className="text-[16px] text-default-500 text-left">{txt}</p>
+                    <p className="text-base text-default-500 text-left ">{txt}</p>
                 </CardHeader>
             </Card>
         </motion.div>

@@ -20,22 +20,22 @@ export default function FAQs() {
     ];
     
   return (
-    <div className=' flex flex-col space-y-0 items-center justify-center overflow-hidden text-center z-0'>
-        <div className='text-center w-[400px] md:w-[800px] lg:w-[1000px] z-20'>
+    <div className=' flex flex-col items-center justify-center text-center z-0 '>
+        <div className='text-center z-20  xl:w-[65%] w-full'>
             <motion.div
             initial={{opacity:0, y:140}}
             transition={{duration:1}}
             whileInView={{opacity:1, y:0}}
             viewport={{once:true}}
-            className='mb-14'>
-                <div className='flex flex-col items-center mt-40'>
+            className='mb-10 '>
+                <div className='flex flex-col items-center'>
                     <Tag tagline='Relevant stuff, bla bla 📣' color='#f1f2f4' />
                 </div>
-                <h1 className='sm:text-2xl  font-extrabold pb-6' style={{fontSize:"58px", lineHeight:"44px"}}>
+                <h1 className='sm:text-6xl text-3xl  font-extrabold ' >
                    Frequently asked questions
                 </h1>
             </motion.div>
-            <div className='mt-8 p-4 text-left'>
+            <div className='text-left  xl:w-[70%] w-[90%] m-auto'>
                 <Accordion variant="splitted">
                     {
                         faqs.map((obj, index)=> (

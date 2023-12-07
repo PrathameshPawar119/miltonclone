@@ -55,10 +55,10 @@ export default function DTable({users, deleteRecord, handleUpdate} : Props) {
 
   return (
     <div>
-      <div className="flex flex-col w-[400px] md:w-[800px] lg:w-[1000px]">
+      <div className="flex flex-col w-[400px] md:w-[800px] lg:w-[1000px] ">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <div className="shadow border-2 border-b border-gray-200 sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
@@ -147,7 +147,7 @@ export default function DTable({users, deleteRecord, handleUpdate} : Props) {
               </table>
               <div className=" my-2 pagination flex flex-row items-center text-center justify-center px-4">
                 <button
-                  className="border text-sm sm:text-lg border-transparent px-3 mx-3 rounded-full h-fit w-fit bg-gray-400"
+                  className="text-sm sm:text-lg border-transparent border-2 px-3 mx-3 rounded-full h-fit w-fit bg-gray-400"
                   onClick={() => {
                     if (pagenum > 1) {
                       setPagenum(pagenum - 1);
@@ -158,7 +158,7 @@ export default function DTable({users, deleteRecord, handleUpdate} : Props) {
                   🔙 Previous
                 </button>
                 <button
-                  className="border text-sm sm:text-lg border-transparent px-3 mx-3 rounded-full h-fit w-fit bg-gray-400"
+                  className=" text-sm sm:text-lg border-transparent border-2 px-3 mx-3 rounded-full h-fit w-fit bg-gray-400"
                   onClick={() => {
                     if (pagenum < Math.ceil(users.length / PAGE_SIZE))
                       setPagenum(pagenum + 1);

@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <div className=" w-screen">
+    <div>
       <Navbar>
         <NavbarBrand>
           <Image src={NavLogo} width={20} height={20} alt="Nav Logo" />
